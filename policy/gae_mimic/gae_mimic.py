@@ -311,7 +311,7 @@ class GAE_Mimic(FSMState):
         robot_quat = self.quat_mul(robot_quat, temp2)
         
         self.ref_anchor_ori_w = self.motion_data["body_quat_w"][self.counter_step, self.motion_anchor_id]
-        print(self.ref_anchor_ori_w)
+        print(f"[INFO] {self.counter_step}: {self.ref_anchor_ori_w}")
 
         # 在第一帧提取当前机器人yaw方向，与参考动作yaw方向做差（与beyond mimic一致）
         if(self.counter_step < 2):
