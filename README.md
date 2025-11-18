@@ -151,6 +151,13 @@ RoboMimic_Deploy/
 - **Remove hands** to avoid collision during dance movements
 
 ### Safety Guidelines
+
+⚠️ **CRITICAL WARNING**: 
+- **ALWAYS test in simulation (Sim2Sim) thoroughly before real robot deployment**
+- **Ensure proper safety measures are in place** (emergency stop, safety harness, clear workspace)
+- **This code comes with NO SAFETY GUARANTEES** - use at your own risk
+- The developers assume no liability for any damage or injury resulting from the use of this software
+
 1. **Test in simulation first** before deploying on real robot
 2. Press `F1` or `Select` for emergency stop (Passive Mode)
 3. Charleston Dance (R1+X) is the most stable policy for real robot
