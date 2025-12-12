@@ -83,3 +83,5 @@ Desktop.ini
 *.log
 *.sqlite
 *.db
+
+motion/
