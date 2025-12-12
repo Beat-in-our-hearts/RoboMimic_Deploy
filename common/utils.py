@@ -17,6 +17,8 @@ class FSMStateName(Enum):
     SKILL_KungFu2 = 9
     SKILL_BEYOND_MIMIC = 10
     SKILL_GAE = 11
+    SKILL_SONIC_ROBOT_MIMIC = 12
+    SKILL_SONIC_HUMAN_MIMIC = 13
    
 
 @unique
@@ -30,6 +32,8 @@ class FSMCommand(Enum):
     SKILL_3 = 7
     SKILL_4 = 8
     SKILL_GAE = 11
+    SKILL_SONIC_ROBOT_MIMIC = 12
+    SKILL_SONIC_HUMAN_MIMIC = 13
     
     
     

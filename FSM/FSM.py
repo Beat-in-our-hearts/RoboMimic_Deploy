@@ -11,6 +11,8 @@ from policy.kick.Kick import Kick
 from policy.kungfu2.KungFu2 import KungFu2
 from policy.beyond_mimic.BeyondMimic import BeyondMimic
 from policy.gae_mimic.gae_mimic import GAE_Mimic
+from policy.sonic_mimic.sonic_robot_mimic import SONIC_ROBOT_Mimic
+from policy.sonic_mimic.sonic_human_mimic import SONIC_HUMAN_Mimic
 from FSM.FSMState import *
 import time
 from common.ctrlcomp import *
@@ -41,7 +43,8 @@ class FSM:
         self.kungfu2_policy = KungFu2(state_cmd, policy_output)
         self.beyond_mimic_policy = BeyondMimic(state_cmd, policy_output)
         self.gae_mimic_policy = GAE_Mimic(state_cmd, policy_output)
-        
+        self.sonic_robot_mimic_policy = SONIC_ROBOT_Mimic(state_cmd, policy_output)
+        self.sonic_human_mimic_policy = SONIC_HUMAN_Mimic(state_cmd, policy_output)
         print("initalized all policies!!!")
         
         self.cur_policy = self.passive_mode
@@ -103,6 +106,10 @@ class FSM:
             self.cur_policy = self.beyond_mimic_policy
         elif((policy_name == FSMStateName.SKILL_GAE)):
             self.cur_policy = self.gae_mimic_policy
+        elif((policy_name == FSMStateName.SKILL_SONIC_ROBOT_MIMIC)):
+            self.cur_policy = self.sonic_robot_mimic_policy
+        elif((policy_name == FSMStateName.SKILL_SONIC_HUMAN_MIMIC)):
+            self.cur_policy = self.sonic_human_mimic_policy
         else:
             pass
             
