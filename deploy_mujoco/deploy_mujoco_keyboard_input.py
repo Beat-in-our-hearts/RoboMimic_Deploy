@@ -42,8 +42,7 @@ class TerminalController:
         print("  b+r1        - Skill 3 (Kick)")
         print("  y+l1        - Skill 4 (BeyondMimic)")
         print("  b+l1        - Skill GAE (GAE_Mimic)")
-        print("  x+l1        - Skill Sonic Robot Mimic (SONIC_ROBOT_Mimic)")
-        print("  x+l2        - Skill Sonic Human Mimic (SONIC_HUMAN_Mimic)")
+        print("  x+l1        - Skill Sonic Mimic (SONIC_Mimic)")
         print("  vel x y z   - Set velocity (e.g., 'vel 0.5 0 0.2')")
         print("  exit        - Exit program")
         print("===========================\n")
@@ -134,11 +133,11 @@ if __name__ == "__main__":
                     state_cmd.skill_cmd = FSMCommand.SKILL_GAE
                     print("Skill GAE (GAE_Mimic)")
                 elif cmd == "x+l1":
-                    state_cmd.skill_cmd = FSMCommand.SKILL_SONIC_ROBOT_MIMIC
-                    print("Skill Sonic Robot Mimic (SONIC_ROBOT_Mimic)")
-                elif cmd == "x+l2":
-                    state_cmd.skill_cmd = FSMCommand.SKILL_SONIC_HUMAN_MIMIC
-                    print("Skill Sonic Human Mimic (SONIC_HUMAN_MIMIC)")
+                    state_cmd.skill_cmd = FSMCommand.SKILL_SONIC
+                    print("Skill Sonic (SONIC_Mimic)")
+                # elif cmd == "x+l2":
+                #     state_cmd.skill_cmd = FSMCommand.SKILL_SONIC_HUMAN_MIMIC
+                #     print("Skill Sonic Human Mimic (SONIC_HUMAN_MIMIC)")
                 elif cmd.startswith("vel "):
                     try:
                         parts = cmd.split()

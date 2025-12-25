@@ -19,6 +19,7 @@ class FSMStateName(Enum):
     SKILL_GAE = 11
     SKILL_SONIC_ROBOT_MIMIC = 12
     SKILL_SONIC_HUMAN_MIMIC = 13
+    SKILL_SONIC = 14
    
 
 @unique
@@ -34,6 +35,7 @@ class FSMCommand(Enum):
     SKILL_GAE = 11
     SKILL_SONIC_ROBOT_MIMIC = 12
     SKILL_SONIC_HUMAN_MIMIC = 13
+    SKILL_SONIC = 14
     
     
     

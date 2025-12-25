@@ -120,6 +120,8 @@ class LocoMode(FSMState):
             return FSMStateName.SKILL_BEYOND_MIMIC
         elif(self.state_cmd.skill_cmd == FSMCommand.SKILL_GAE):
             return FSMStateName.SKILL_GAE
+        elif(self.state_cmd.skill_cmd == FSMCommand.SKILL_SONIC):
+            return FSMStateName.SKILL_SONIC
         elif(self.state_cmd.skill_cmd == FSMCommand.SKILL_SONIC_ROBOT_MIMIC):
             return FSMStateName.SKILL_SONIC_ROBOT_MIMIC
         elif(self.state_cmd.skill_cmd == FSMCommand.SKILL_SONIC_HUMAN_MIMIC):
